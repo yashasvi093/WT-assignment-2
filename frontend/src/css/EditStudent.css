@@ -1,0 +1,51 @@
+.student-form {
+    width: 400px;
+    margin: 2rem auto;
+    background: #fff4f4;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .student-form label {
+    display: block;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .student-form input[type="text"],
+  .student-form input[type="email"],
+  .student-form input[type="date"],
+  .student-form input[type="number"] {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+  
+  .student-form input[type="checkbox"] {
+    margin-left: 0.5rem;
+  }
+  
+  .student-form button {
+    width: 100%;
+    background-color: #f57c00;
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .student-form button:hover {
+    background-color: #ef6c00;
+  }
+  
