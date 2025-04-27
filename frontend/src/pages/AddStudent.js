@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 import '../css/AddStudent.css';
 
 export default function AddStudent() {
@@ -37,7 +37,8 @@ export default function AddStudent() {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/students', payload);
+      console.log(api.defaults.baseURL);
+      const response = await api.post('/students', payload);
       alert('Student added!');
       console.log(response.data);
     } catch (error) {
@@ -49,25 +50,25 @@ export default function AddStudent() {
   return (
     <form className="student-form" onSubmit={handleSubmit}>
       <label>Student ID
-        <input name="studentId" onChange={handleChange} value={formData.studentId} />
+        <input name="studentId" value={formData.studentId} onChange={handleChange} />
       </label>
       <label>First Name
-        <input name="firstName" onChange={handleChange} value={formData.firstName} />
+        <input name="firstName" value={formData.firstName} onChange={handleChange} />
       </label>
       <label>Last Name
-        <input name="lastName" onChange={handleChange} value={formData.lastName} />
+        <input name="lastName" value={formData.lastName} onChange={handleChange} />
       </label>
       <label>Email
-        <input name="email" onChange={handleChange} value={formData.email} />
+        <input name="email" value={formData.email} onChange={handleChange} />
       </label>
       <label>Date of Birth
-        <input name="dob" type="date" onChange={handleChange} value={formData.dob} />
+        <input type="date" name="dob" value={formData.dob} onChange={handleChange} />
       </label>
       <label>Department
-        <input name="department" onChange={handleChange} value={formData.department} />
+        <input name="department" value={formData.department} onChange={handleChange} />
       </label>
       <label>Enrollment Year
-        <input name="enrollmentYear" onChange={handleChange} value={formData.enrollmentYear} />
+        <input name="enrollmentYear" value={formData.enrollmentYear} onChange={handleChange} />
       </label>
       <label>Active
         <input type="checkbox" name="isActive" checked={formData.isActive} onChange={handleChange} />
